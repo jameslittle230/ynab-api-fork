@@ -12,7 +12,7 @@ EOF
 extra_readme=$(cat <<'EOF'
 Jesse Luehrs <doy@tozt.net>
 
-Based on the OpenAPI spec found at https://github.com/ynab/ynab-sdk-js/blob/master/spec-v1-swagger.json by You Need A Budget, LLC
+Based on the OpenAPI spec found at https://api.ynab.com/papi/open_api_spec.yaml by You Need A Budget, LLC
 EOF
 )
 
@@ -24,7 +24,7 @@ openapi-generator-cli \
     generate \
     -g rust \
     --library reqwest \
-    -i data/spec-v1-swagger.json \
+    -i data/open_api_spec.yaml \
     -c data/openapi.yaml \
     --package-name ynab-api
 
