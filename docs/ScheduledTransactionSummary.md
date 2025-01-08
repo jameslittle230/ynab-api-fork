@@ -10,7 +10,8 @@ Name | Type | Description | Notes
 **frequency** | **String** |  | 
 **amount** | **i64** | The scheduled transaction amount in milliunits format | 
 **memo** | Option<**String**> |  | [optional]
-**flag_color** | Option<**String**> | The scheduled transaction flag | [optional]
+**flag_color** | Option<[**crate::models::TransactionFlagColor**](TransactionFlagColor.md)> |  | [optional]
+**flag_name** | Option<**String**> | The customized name of a transaction flag | [optional]
 **account_id** | **String** |  | 
 **payee_id** | Option<**String**> |  | [optional]
 **category_id** | Option<**String**> |  | [optional]

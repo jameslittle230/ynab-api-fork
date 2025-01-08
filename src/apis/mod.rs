@@ -36,8 +36,6 @@ mod budgets_api;
 pub use self::budgets_api::{ BudgetsApi, BudgetsApiClient };
 mod categories_api;
 pub use self::categories_api::{ CategoriesApi, CategoriesApiClient };
-mod deprecated_api;
-pub use self::deprecated_api::{ DeprecatedApi, DeprecatedApiClient };
 mod months_api;
 pub use self::months_api::{ MonthsApi, MonthsApiClient };
 mod payee_locations_api;

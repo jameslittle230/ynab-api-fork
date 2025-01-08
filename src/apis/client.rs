@@ -6,7 +6,6 @@ pub struct APIClient {
     accounts_api: Box<dyn crate::apis::AccountsApi>,
     budgets_api: Box<dyn crate::apis::BudgetsApi>,
     categories_api: Box<dyn crate::apis::CategoriesApi>,
-    deprecated_api: Box<dyn crate::apis::DeprecatedApi>,
     months_api: Box<dyn crate::apis::MonthsApi>,
     payee_locations_api: Box<dyn crate::apis::PayeeLocationsApi>,
     payees_api: Box<dyn crate::apis::PayeesApi>,
@@ -23,7 +22,6 @@ impl APIClient {
             accounts_api: Box::new(crate::apis::AccountsApiClient::new(rc.clone())),
             budgets_api: Box::new(crate::apis::BudgetsApiClient::new(rc.clone())),
             categories_api: Box::new(crate::apis::CategoriesApiClient::new(rc.clone())),
-            deprecated_api: Box::new(crate::apis::DeprecatedApiClient::new(rc.clone())),
             months_api: Box::new(crate::apis::MonthsApiClient::new(rc.clone())),
             payee_locations_api: Box::new(crate::apis::PayeeLocationsApiClient::new(rc.clone())),
             payees_api: Box::new(crate::apis::PayeesApiClient::new(rc.clone())),
@@ -43,10 +41,6 @@ impl APIClient {
 
     pub fn categories_api(&self) -> &dyn crate::apis::CategoriesApi{
         self.categories_api.as_ref()
-    }
-
-    pub fn deprecated_api(&self) -> &dyn crate::apis::DeprecatedApi{
-        self.deprecated_api.as_ref()
     }
 
     pub fn months_api(&self) -> &dyn crate::apis::MonthsApi{
